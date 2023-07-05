@@ -1,108 +1,59 @@
-*
-{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
     display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    background: url('pharmacy.img.png') no-repeat;
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
-}
-.landing_page {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    height: 1vh;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.menu-bar {
-    text-align: center;
-}
-.menu-bar ul {
-    display: inline-flex;
-    list-style: none;
-    color: darkcyan;
-}
-.menu-bar ul li {
-    width: 120px;
-    margin: 15px;
-    padding: 15px;
-}
-.menu-bar ul li a {
+  }
+  
+  nav ul li {
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-}
-.active, .menu-bar ul li:hover {
-    background: lightskyblue;
+  }
+  .active, nav ul li:hover {
+    background: gray;
     border-radius: 10px;
-}
-.menu-bar .fa {
-    margin-right: 8px;
-}
-.sub-menu-1 {
-    display: none;
-}
-.menu-bar ul li:hover .sub-menu-1
-{
-    display: block;
-    position: absolute;
-    background: darkcyan;
-    margin-top: 15px;
-    margin-left: -15px;
-}
-.menu-bar ul li:hover .sub-menu-1 ul 
-{
-    display: block;
-    margin: 10px;
-}
-.menu-bar ul li:hover .sub-menu-1 ul li 
-{
-    width: 150px;
-    padding: 10px;
-    border-bottom: 1px dotted white;
-    background: transparent;
-    border-radius: 0;
-    text-align: left;
-}
-.menu-bar ul li:hover .sub-menu-1 ul li:last-child
-{
-    border-bottom: none;
-}
-.menu-bar ul li:hover .sub-menu-1 ul li a:hover
-{
-    color: skyblue;
-}
-h1 {
-    float: left;
-    font-size: 32px;
-    margin-bottom: 20px;
-    align-content: flex-start;
-}
-.buttons {
-    display: flex;
-    gap: 10px;
-    height: 40px;
-    align-items: end;
-    right: 150%;
-}
-.button {
-    display: inline-block;
-    padding: 10px;
-    background-color: darkcyan;
-    color: white;
+  }
+  
+  .login-btn {
+    background-color: #fff;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 4px;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-.button:hover {
-    background-color: aquamarine;
-}
-
-
+  }
+  .register-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+  h1 {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif ;
+  }
+  

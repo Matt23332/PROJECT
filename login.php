@@ -21,7 +21,7 @@ if (isset($_POST['login'])) {
       header("Location: patient.php");
     } elseif ($row['role'] == 'doctor') {
       header("Location: doctor.php");
-    } elseif ($_row['role'] == 'pharmacist') {
+    } elseif ($row['role'] == 'pharmacist') {
       header("Location: pharmacy.php");
     } else {
       header("Location: home.html");
@@ -58,23 +58,35 @@ if (isset($_SESSION["user"])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Login</h1>
-  <form action="" method="POST">
-    <div>
-      <label for="user">Username:</label>
-      <input type="text" id="user" name="user" required>
-    </div>
-    <div>
-      <label for="pass">Password:</label>
-      <input type="password" id="pass" name="pass" required>
-    </div>
-    <div>
-      <input type="submit" name="login" value="Login">
-    </div>
+  <!--wrapper-->
+  <div class="wrapper">
+    <section>
+      <center>
+        <header>
+          Login form
+        </header>
+      </center>
+      <!--login form begins here-->
+      <form action="" class="header" method="POST">
+        <div class="field input">
+          <label for="">Username: </label>
+          <input type="text" name="user" id="user" placeholder="Enter your username" required>
+        </div>
+        <div class="field input">
+          <label for="">Password: </label>
+          <input type="password" name="pass" id="pass" placeholder="Enter your password" required>
+        </div>
+        <div class="field button">
+          <input type="submit" name="login" value="LOGIN">
+        </div>
 
-    Don't have an account? <a href="registration.php" class="link">Register here...</a>
-  </form>
+        Don't have an account? <a href="registration.php" class="link">Register here...</a>
+      </form>
+    </section>
+  </div>
 </body>
 </html>

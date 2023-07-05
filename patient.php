@@ -49,7 +49,7 @@ session_start();
                     </div>
                     <div class="field button">
                         <input type="submit" name="submit" value="ADD PATIENT">
-                        <input type="submit" name="submit" value="UPDATE PATIENT"><a href="CRUD.php"></a>
+                        <a class="update-btn" href="CRUD.php">UPDATE DETAILS</a><br>
                     </div>
 
                     Click here to <a href="logout.php" class="link">logout</a>
