@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+  
+  }
+  body{
+    display:flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url('pharmacy.img.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    justify-content: center;
+    
+  }
+  .wrapper{
+    background-color: none;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+  }
+  form {
+    padding: 25px 30px;
+  }
+  header {
+    font-size: 25px;
+    font-weight: 600px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  form {
+    margin: 20px 0;
+  }
+  form .error-text {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid #f5c6cb;
+  }
+  
+  form .input input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  form .field input {
+    outline: none;
+  }
+  .field:first-child {
+    margin-right: 10px;
+    width: 392px;
+  }
+  .field:last-child {
+    margin-right: 10px;
+    width: 185px;
+  }
+  form .field label {
+    margin-bottom: 2px;
+  }
+  form .button input {
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    background: #009072;
+    color: white;
+  }
+   .link {
+    text-decoration: none;
+    color: #009970;
+    font-weight: 200;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .link:hover {
+    text-decoration: none;
+    color: teal;
+  }

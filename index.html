@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1> Drug dispensing</h1>
+        <p>This is a paragraph</p>
+
+        <form action="drug.php" method="post">
+            <ul>
+                <li>Milk</li>
+                <li>bread</li>
+                <li><em>French toast</em></li>
+            </ul>
+            <input type="text" readonly>
+            <select name="drugs" id="drugs">
+                <option value="">Panadol</option>
+                <option value="">Paracetamol</option>
+                <option value="">Cetrizine</option>
+            </select>
+            <input type="submit" value="Dispense drug" name="drug_dispense">
+        </form>
+    </body>
