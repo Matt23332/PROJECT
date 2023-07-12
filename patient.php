@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+session_start()
 
 ?>
 
@@ -12,52 +12,32 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=0.1">
         <title>Pharmacy Management System</title>
 
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="home.css">
     </head>
     <body>
-        <!--wrapper-->
-        <div class="wrapper">
-            <section>
-                <center>
-                    <header>
-                        Patient form
-                    </header>
-                </center>
-                <!--patient form starts here-->
-                <h1>WELCOME, <?php echo $_SESSION['user']; ?></h1>
+        <header>
+            <nav>
+            <h6>WELCOME, <?php echo $_SESSION['user']; ?> </h6>
 
-                <form action="add_patient.php" class="header" method="post">
-                    <div class="field input">
-                        <label for="">Name</label>
-                        <input type="text" name="name" placeholder="Enter your name">
+                <ul>
+                    <div>
+                        <li><a href="homePage.html">Home</a></li>
                     </div>
-                    <div class="field input">
-                        <label for="">Phone Number</label>
-                        <input type="text" name="number" placeholder="Enter your phone number">
+                    <div>
+                        <li><a href="add_patient.php">Register Patient</a></li>
                     </div>
-                    <div class="field input">
-                        <label for="">Address</label>
-                        <input type="text" name="address" placeholder="Enter your address">
+                    <div>
+                        <li><a href="update.php">Update details</a></li>
                     </div>
-                    <div class="field input">
-                        <label for="">Sickness</label>
-                        <input type="text" name="sickness" placeholder="Enter your sickness/symptoms">
+                    <div>
+                        <li><a href="CRUD.php" target="_self">View details</a></li>
                     </div>
-                    <div class="field input">
-                        <label for="">Doctor's Name</label>
-                        <input type="text" name="doctor_name" placeholder="Enter your doctor's name">
-                    </div>
-                    <div class="field button">
-                        <input type="submit" name="submit" value="ADD PATIENT">
-                        <a class="update-btn" href="CRUD.php">UPDATE DETAILS</a><br>
-                    </div>
+                </ul>
+            </nav>
+            <a class="logout-btn" href="logout.php">Logout</a> 
 
-                    Click here to <a href="logout.php" class="link">logout</a>
-                </form>
-                <!--patient form ends here-->
-            </section>
+        </header>
+        <div class="image">
         </div>
-
-        <!--wrapper-->
     </body>
 </html>

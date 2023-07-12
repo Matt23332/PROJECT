@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="example.css">
+        <body>
+            <article>
+                <p>
+                    This is an article.
+                </p>
+            </article>
+            <article class="first-child">This is another article</article>
+            <h1>Attribute presence and value selectors</h1>
+            <ul>
+                <li>Item 1</li>
+                <li class="a">Item 2</li>
+                <li class="a b">Item 3</li>
+                <li class="ab">Item 4</li>
+            </ul>
+            <ul class="ems">
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <ul>
+                    <li>Three A</li>
+                    <li>Three B</li>
+                    <ul>
+                        <li>Three B2</li>
+                    </ul>
+                </ul>
+            </ul>
+            <div class="wrapper">
+                <div class="box px">I am 200px wide</div>
+                <div class="box vw">I am 10vw wide</div>
+                <div class="box em">I am 10em wide</div>
+            </div>
+            <div class="notebox">
+                This is an informational note
+            </div>
+            <div class="notebox warning">
+                This note shows a warning.
+            </div>
+            <div class="notebox danger">
+                This note shows danger
+            </div>
+        </body>
+    </head>
+</html>

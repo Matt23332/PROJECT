@@ -52,7 +52,7 @@ if (isset($_POST['updatePatient'])) {
 
   if ($updateResult) {
     echo "Record updated successfully.";
-    header("Location: CRUD.php");
+    header("Location: patient.php");
     exit();
   } else {
     echo "Error updating record: " . mysqli_error($conn);

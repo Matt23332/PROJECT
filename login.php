@@ -16,7 +16,7 @@ if (isset($_POST['login'])) {
 
     // Redirect based on user role
     if ($row['role'] == 'admin') {
-      header("Location: home.html");
+      header("Location: admin.php");
     } elseif ($row['role'] == 'patient') {
       header("Location: patient.php");
     } elseif ($row['role'] == 'doctor') {
@@ -24,7 +24,7 @@ if (isset($_POST['login'])) {
     } elseif ($row['role'] == 'pharmacist') {
       header("Location: pharmacy.php");
     } else {
-      header("Location: home.html");
+      header("Location: homePage.php");
     }
 
     exit();
@@ -36,7 +36,7 @@ if (isset($_POST['login'])) {
 if (isset($_SESSION["user"])) {
   // Redirect based on user role
   if ($_SESSION["role"] == 'admin') {
-    header("Location: home.html");
+    header("Location: admin.php");
   } elseif ($_SESSION["role"] == 'patient') {
     header("Location: patient.php");
   } elseif ($_SESSION["role"] == 'doctor') {
@@ -44,7 +44,7 @@ if (isset($_SESSION["user"])) {
   } elseif ($_SESSION["role"] == 'pharmacist') {
     header("Location: pharmacy.php");
   } else {
-    header("Location: home.html");
+    header("Location: homePage.php");
   }
 
   exit();

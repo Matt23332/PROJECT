@@ -1,0 +1,116 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('pharmacy.img.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.menu-bar {
+    text-align: center;
+    background-color: #333;
+    display: flex;
+    padding: 1px;
+    list-style: none;
+}
+.menu-bar h6 {
+    font-size: medium;
+    position: absolute;
+    right: 7%;
+    margin: 10px;
+}
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #333;
+}
+.menu-bar ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a {
+    text-decoration: none;
+    color: white;
+}
+.active, .menu-bar ul li:hover {
+    background: gray;
+    border-radius: 10px;
+}
+.menu-bar .fa {
+    margin-right: 8px;
+}
+.sub-menu-1 {
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: #333;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul 
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li 
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: gray;
+}
+h1 {
+    float: left;
+    font-size: 32px;
+    margin-bottom: 20px;
+    align-content: flex-start;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    align-items: end;
+    right: 150%;
+}
+.button {
+    display: inline-block;
+    padding: 10px;
+    background-color: darkcyan;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.button:hover {
+    background-color: aquamarine;
+}
+.logout_button {
+    background-color: #fff;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    float: right;
+}
