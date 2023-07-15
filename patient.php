@@ -21,16 +21,13 @@ session_start()
 
                 <ul>
                     <div>
-                        <li><a href="homePage.html">Home</a></li>
+                        <li><a href="homePage.php">Home</a></li>
                     </div>
                     <div>
                         <li><a href="add_patient.php">Register Patient</a></li>
                     </div>
                     <div>
-                        <li><a href="update.php">Update details</a></li>
-                    </div>
-                    <div>
-                        <li><a href="CRUD.php" target="_self">View details</a></li>
+                        <li><a href="view_patient.php" target="_self">View details</a></li>
                     </div>
                 </ul>
             </nav>
