@@ -2,11 +2,10 @@
 
 require ("connect.php");
 
-$query = "SELECT * FROM doctor";
+$query = "SELECT * FROM prescription";
 $result = mysqli_query($conn,$query);
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en-GB">
@@ -23,16 +22,16 @@ $result = mysqli_query($conn,$query);
                 <div class="col">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="display-6 text-center">Doctor details</h2>
-                            <button class="btn btn-primary my-5"><a href="update_doctor.php" class="text-light">Update Details</a></button>
+                            <h2 class="display-6 text-center">Prescription details</h2>
                         </div>
                         <div class="card-body">
                         <table border="1" cellpadding="5" id="data table">
                                 <tr>
                                     <td>id</td>
-                                    <td>doctor_name</td>
-                                    <td>specialty</td>
-                                    <td>experience</td>
+                                    <td>name</td>
+                                    <td>drug_name</td>
+                                    <td>date</td>
+                                    <td>quantity</td>
                                 </tr>
                                 <tr>
                                     <?php
@@ -40,9 +39,10 @@ $result = mysqli_query($conn,$query);
                                     {
                                     ?>
                                         <td><?php echo $row['id'];?></td>
-                                        <td><?php echo $row['doctor_name'];?></td>
-                                        <td><?php echo $row['specialty'];?></td>
-                                        <td><?php echo $row['experience'];?></td>
+                                        <td><?php echo $row['name'];?></td>
+                                        <td><?php echo $row['drug_name'];?></td>
+                                        <td><?php echo $row['date'];?></td>
+                                        <td><?php echo $row['quantity'];?></td>
                                         <td><a href="delete.php?deleteid=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a></td>
                                     
                                     </tr>

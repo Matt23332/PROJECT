@@ -2,11 +2,10 @@
 
 require ("connect.php");
 
-$query = "SELECT * FROM doctor";
+$query = "SELECT * FROM drug";
 $result = mysqli_query($conn,$query);
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en-GB">
@@ -19,20 +18,23 @@ $result = mysqli_query($conn,$query);
     </head>
     <body>
         <div class="container">
-            <div class="row mt-5">
+        <div class="row mt-5">
                 <div class="col">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="display-6 text-center">Doctor details</h2>
-                            <button class="btn btn-primary my-5"><a href="update_doctor.php" class="text-light">Update Details</a></button>
+                            <h2 class="display-6 text-center">Drug details</h2>
+                            <button class="btn btn-primary my-5"><a href="update.php" class="text-light">Update Details</a></button>
                         </div>
                         <div class="card-body">
                         <table border="1" cellpadding="5" id="data table">
                                 <tr>
                                     <td>id</td>
-                                    <td>doctor_name</td>
-                                    <td>specialty</td>
-                                    <td>experience</td>
+                                    <td>name</td>
+                                    <td>formula</td>
+                                    <td>price</td>
+                                    <td>company_name</td>
+                                    <td>manufacture_date</td>
+                                    <td>expiry_date</td>
                                 </tr>
                                 <tr>
                                     <?php
@@ -40,9 +42,12 @@ $result = mysqli_query($conn,$query);
                                     {
                                     ?>
                                         <td><?php echo $row['id'];?></td>
-                                        <td><?php echo $row['doctor_name'];?></td>
-                                        <td><?php echo $row['specialty'];?></td>
-                                        <td><?php echo $row['experience'];?></td>
+                                        <td><?php echo $row['name'];?></td>
+                                        <td><?php echo $row['formula'];?></td>
+                                        <td><?php echo $row['price'];?></td>
+                                        <td><?php echo $row['company_name'];?></td>
+                                        <td><?php echo $row['manufacture_date'];?></td>
+                                        <td><?php echo $row['expiry_date'];?></td>
                                         <td><a href="delete.php?deleteid=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a></td>
                                     
                                     </tr>

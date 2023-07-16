@@ -23,7 +23,7 @@ $result = mysqli_query($conn,$query);
                     <div class="card">
                         <div class="card-header">
                             <h2 class="display-6 text-center">Patient details</h2>
-                            <button class="btn btn-primary my-5"><a href="update.php" class="text-light">Update Details</a></button>
+                            <button class="btn btn-primary my-5"><a href="update_patient.php" class="text-light">Update Details</a></button>
                         </div>
                         <div class="card-body">
                         <table border="1" cellpadding="5" id="data table">

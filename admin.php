@@ -20,26 +20,27 @@ session_start()
                     <li><a href="#">Patient</a>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="patient.php">Add Patient</a></li>
-                                <li><a href="#">Check Prescription</a></li>
-                                <li><a href="CRUD.php">View details</a></li>
+                                <li><a href="add_patient.php">Add Patient</a></li>
+                                <li><a href="view_prescription.php">Check Prescription</a></li>
+                                <li><a href="view_patient.php">View details</a></li>
                             </ul>
                         </div>
                     </li>
                     <li><a href="#">Doctor</a>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="doctor.php">Add Doctor</a></li>
+                                <li><a href="add_doctor.php">Add Doctor</a></li>
                                 <li><a href="add_prescription.php">Write prescription</a></li>
-                                <li><a href="CRUD.php">View patient details</a></li>
+                                <li><a href="view_doctor.php">View doctor details</a></li>
+                                <li><a href="view_patient.php">View patient details</a></li>
                             </ul>
                         </div>
                     </li>
                     <li><a href="#">Pharmacy</a>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="drug.php">Add drug</a></li>
-                                <li><a href="CRUD.php">View drugs</a></li>
+                                <li><a href="add_drug.php">Add drug</a></li>
+                                <li><a href="view_drug.php">View drugs</a></li>
                             </ul>
                         </div>
                     </li>
