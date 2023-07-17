@@ -35,6 +35,9 @@ session_start()
         <div>
           <li><a href="view_prescription.php">View prescription</a></li>
         </div>
+        <div>
+          <li><a href="dispense.php">Dispense drug</a></li>
+        </div>
       </ul>
     </nav>
     <a class="logout-btn" href="logout.php">Logout</a>

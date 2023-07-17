@@ -11,16 +11,17 @@ class add_drug {
             $company_name = $_POST["company_name"];
             $manufacture_date = $_POST["manufacture_date"];
             $expiry_date = $_POST["expiry_date"];
+            $quantity = $_POST["quantity"];
         
 
         $data = array(
-            "id" => "",
             "name" => $name,
             "formula" => $formula,
             "price" => $price,
             "company_name" => $company_name,
             "manufacture_date" => $manufacture_date,
-            "expiry_date" => $expiry_date
+            "expiry_date" => $expiry_date,
+            "quantity" => $quantity
         );
 
         $database->insertData("drug",$data);
@@ -77,6 +78,10 @@ $add_drug->insertDataIntoDatabase();
                     <div class="field input">
                         <label for="">Expiry Date</label>
                         <input type="date" name="expiry_date" placeholder="Enter the expiry date">
+                    </div>
+                    <div class="field input">
+                        <label for="">Quantity</label>
+                        <input type="number" name="quantity" placeholder="Enter the quantity">
                     </div>
                     <div class="field button">
                         <input type="submit" name="submit" value="ADD DRUG">
