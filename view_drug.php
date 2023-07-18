@@ -28,7 +28,7 @@ $result = mysqli_query($conn,$query);
                         <div class="card-body">
                         <table border="1" cellpadding="5" id="data table">
                                 <tr>
-                                    <td>name</td>
+                                    <td>drug_name</td>
                                     <td>formula</td>
                                     <td>price</td>
                                     <td>company_name</td>
@@ -41,14 +41,14 @@ $result = mysqli_query($conn,$query);
                                     while ($row = mysqli_fetch_assoc($result))
                                     {
                                     ?>
-                                        <td><?php echo $row['name'];?></td>
+                                        <td><?php echo $row['drug_name'];?></td>
                                         <td><?php echo $row['formula'];?></td>
                                         <td><?php echo $row['price'];?></td>
                                         <td><?php echo $row['company_name'];?></td>
                                         <td><?php echo $row['manufacture_date'];?></td>
                                         <td><?php echo $row['expiry_date'];?></td>
                                         <td><?php echo $row['quantity'];?></td>
-                                        <td><a href="delete.php?deleteid=<?php echo $row['name']; ?>" class="btn btn-danger">Delete</a></td>
+                                        <td><a href="delete.php?deleteid=<?php echo $row['drug_name']; ?>" class="btn btn-danger">Delete</a></td>
                                     
                                     </tr>
                                     <?php

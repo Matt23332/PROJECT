@@ -41,6 +41,7 @@ session_start()
                             <ul>
                                 <li><a href="add_drug.php">Add drug</a></li>
                                 <li><a href="view_drug.php">View drugs</a></li>
+                                <li><a href="view_prescription.php">View prescriptions</a></li>
                             </ul>
                         </div>
                     </li>

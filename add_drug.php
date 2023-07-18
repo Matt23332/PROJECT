@@ -5,7 +5,7 @@ class add_drug {
     public function insertDataIntoDatabase() {
         $database = new databaseHandler("localhost","root","","test");
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $name = $_POST["name"];
+            $drug_name = $_POST["drug_name"];
             $formula = $_POST["formula"];
             $price = $_POST["price"];
             $company_name = $_POST["company_name"];
@@ -15,7 +15,7 @@ class add_drug {
         
 
         $data = array(
-            "name" => $name,
+            "drug_name" => $drug_name,
             "formula" => $formula,
             "price" => $price,
             "company_name" => $company_name,
@@ -56,8 +56,8 @@ $add_drug->insertDataIntoDatabase();
                 <!--drug form starts here-->
                 <form action="add_drug.php" class="header" method="POST">
                     <div class="field input">
-                        <label for="">Name</label>
-                        <input type="text" name="name" placeholder="Enter the drug name">
+                        <label for="">Drug Name</label>
+                        <input type="text" name="drug_name" placeholder="Enter the drug name">
                     </div>
                     <div class="field input">
                         <label for="">Formula</label>
