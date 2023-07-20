@@ -81,7 +81,7 @@ $add_drug->insertDataIntoDatabase();
                     </div>
                     <div class="field input">
                         <label for="">Quantity</label>
-                        <input type="number" name="quantity" placeholder="Enter the quantity">
+                        <input type="number" name="quantity" min="1" placeholder="Enter the quantity">
                     </div>
                     <div class="field button">
                         <input type="submit" name="submit" value="ADD DRUG">

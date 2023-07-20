@@ -61,7 +61,7 @@ $add_doctor->insertDataIntoDatabase();
                     </div>
                     <div class="field input">
                         <label for="">Years of Experience</label>
-                        <input type="number" name="experience" placeholder="Enter the years of experience">
+                        <input type="number" name="experience" min="1" placeholder="Enter the years of experience">
                     </div>
                     <div class="field button">
                         <input type="submit" name="submit" value="ADD DOCTOR">
