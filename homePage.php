@@ -2,15 +2,16 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="home.css">
+        <title>Home</title>
     </head>
     <body>
         <header>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="homePage.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
                 </ul>
             </nav>
             <a class="login-btn" href="login.php">Login</a>
@@ -38,5 +39,8 @@
 
             </p>            
         </section>
+        <footer>
+            <p>&copy; 2023 MEDITECH Pharmacy</p>
+        </footer>
     </body>
 </html>

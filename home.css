@@ -90,3 +90,79 @@ h2 {
   max-height: 100%;
   border: 3px solid #333;
 }
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+.service-card {
+  width: 300px;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.service-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+.contact-form {
+  width: 400px;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-form h2 {
+  margin-top: 0;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  margin-top: 0.5rem;
+}
+.contact-form input, .contact-form textarea {
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+.contact-form button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-info {
+  width: 300x;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-info h2 {
+  margin-top: 0;
+}
+.social-icons {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.social-icon {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+.social-icon:hover {
+  color: #007bff;
+}
