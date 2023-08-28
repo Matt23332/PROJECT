@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Our Services</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="home.css">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="homePage.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contacts.html">Contact</a></li>
-                </ul>
-            </nav>
-            <a class="login-btn" href="login.php">Login</a>
-        </header>
+<?php
+$pageTitle = "Our Services";
+$section = null;
+include ('include/header.php');
+?>
         <h1>
             Our Services
         </h1>
@@ -48,13 +32,6 @@
                 </p>
             </div>
         </main>
-        <footer>
-            <div class="social-icons">
-                <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
-            <p>&copy; 2023 MEDITECH Pharamacy</p>
-        </footer>
-    </body>
-</html>
+<?php
+include ('include/footer.php');
+?>

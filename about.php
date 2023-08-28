@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="home.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <title>About Us</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="homePage.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contacts.html">Contact</a></li>
-
-                </ul>
-            </nav>
-            <a class="login-btn" href="login.php">Login</a>
-        </header>
+<?php
+$pageTitle = "About Us";
+$section = null;
+include ('include/header.php');
+?>
         <section>
             <h1>VISION</h1>
             <p>
@@ -35,4 +20,7 @@
             </p>
         </section>
     </body>
+    <?php
+    include ('include/footer.php');
+    ?>
 </html>

@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="home.css">
-        <title>Home</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="homePage.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contacts.html">Contact</a></li>
-                </ul>
-            </nav>
-            <a class="login-btn" href="login.php">Login</a>
-        </header>
+<?php
+$pageTitle = "Home";
+$section = null;
+include ('include/header.php');
+?>
+
         <h2>
             WELCOME TO MEDITECH PHARMACY
         </h2>
@@ -38,9 +26,6 @@
                 WANT TO START A FREE TRIAL? <a class="register-btn" href="registration.php">SIGN UP</a>
 
             </p>            
-        </section>
-        <footer>
-            <p>&copy; 2023 MEDITECH Pharmacy</p>
-        </footer>
-    </body>
-</html>
+            <?php
+            include ('include/footer.php')
+            ?>
