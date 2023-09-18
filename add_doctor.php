@@ -74,5 +74,11 @@ $add_doctor->insertDataIntoDatabase();
         </div>
 
         <!--wrapper-->
+        <script>
+            function successful_registration() {
+                setTimeout (function() {successful_registration()}, 1000);
+                alert("User successfully registered.");
+        }
+        </script>
     </body>
 </html>

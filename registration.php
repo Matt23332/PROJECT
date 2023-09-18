@@ -63,11 +63,10 @@ require ("connect.php");
       </div>
       <script>
         function successful_registration() {
-          setTimeout (function() {successful_registration.close()}, 1000);
+          setTimeout (function() {}, 1000);
           alert("User successfully registered.");
         }
       </script>
-
   <!--wrapper-->
 
   <?php
