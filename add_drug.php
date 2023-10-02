@@ -1,10 +1,9 @@
 <?php
 require ("databaseHandler.php");
-include ("connect.php");
 
 class add_drug {
     public function insertDataIntoDatabase() {
-        $database = new databaseHandler("localhost","root","","test");
+        //$database = new databaseHandler("localhost","root","","test");
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $drug_name = $_POST["drug_name"];
             $formula = $_POST["formula"];
@@ -18,6 +17,7 @@ class add_drug {
             $targetFilePath = $uploadDirectory . basename($_FILES["drug_image"]["name"]);
 
             if (move_uploaded_file($_FILES["drug_image"]["tmp_name"], $targetFilePath)) {
+                $conn = new mysqli("localhost","root","","test");
                 $insertQuery = "INSERT INTO drug(drug_name, formula, price, company_name, manufacture_date, expiry_date, quantity, drug_image) VALUES ('$drug_name', '$formula', $price, '$company_name', '$manufacture_date', '$expiry_date', $quantity, '$targetFilePath')";
                 if (mysqli_query($conn, $insertQuery)) {
                     echo "Drug added successfully.";
@@ -37,7 +37,7 @@ class add_drug {
             "quantity" => $quantity
         );
 
-        $database->insertData("drug",$data);
+        //$database->insertData("drug",$data);
     }
     }
 }
