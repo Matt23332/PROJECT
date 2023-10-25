@@ -63,8 +63,13 @@ require ("connect.php");
       </div>
       <script>
         function successful_registration() {
-          setTimeout (function() {}, 1000);
           alert("User successfully registered.");
+          setTimeout (function() {
+            var successful_registration = document.querySelector(".field button");
+            if (successful_registration) {
+              successful_registration.style.display = "none";
+            }
+          }, 1000);
         }
       </script>
   <!--wrapper-->
