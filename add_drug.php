@@ -58,14 +58,15 @@ $add_drug->insertDataIntoDatabase();
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!--navbar-->
+        <div class="navbar">
+            <ul>
+                <li><a href="admin.php">Home</a></li>
+            </ul>
+        </div>
         <!--wrapper-->
         <div class="wrapper">
             <section>
-                <center>
-                    <header>
-                        Drug form
-                    </header>
-                </center>
                 <!--drug form starts here-->
                 <form action="add_drug.php" class="header" method="POST" enctype="multipart/form-data">
                     <div class="field input">

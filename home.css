@@ -28,7 +28,7 @@ nav ul li {
   margin-right: 10px;
 }
 nav ul li a {
-  font-size: medium;
+  font-size: large;
   font-weight: 600;
   font-family: 'Times New Roman', Times, serif;
   color: #fff;
@@ -36,8 +36,8 @@ nav ul li a {
 }
 .active, nav ul li:hover {
   background: gray;
-  border: 30px;
-  border-radius: 15px;
+  border: 10px;
+  border-radius: 2px;
 }
 .login-btn, .logout-btn {
   background-color: #fff;

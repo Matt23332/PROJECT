@@ -54,6 +54,7 @@ $result = mysqli_query($conn,$query);
                             }
                             ?>
                         </div>
+                        <button class="btn btn-primary my-5"><a href="admin.php">Home</a></button>
                     </div>
                 </div>
             </div>
