@@ -73,6 +73,17 @@
   form .field label {
     margin-bottom: 2px;
   }
+  
+  form .button button {
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    background: #333;
+    color: #ffffff;
+  }
+  
   form .button input {
     margin-top: 13px;
     height: 45px;
