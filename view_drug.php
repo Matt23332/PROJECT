@@ -15,6 +15,17 @@ $result = mysqli_query($conn,$query);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="home.css">
   <title>CRUD Operations</title>
+  <style>
+    .drug {
+        border: 1px solid;
+        padding: 10px;
+        margin: 10px;
+    }
+    .drug img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+  </style>
     </head>
     <body>
         <div class="container">
@@ -26,37 +37,24 @@ $result = mysqli_query($conn,$query);
                             <button class="btn btn-primary my-5"><a href="update_drug.php" class="text-light">Update Details</a></button>
                         </div>
                         <div class="card-body">
-                        <table border="1" cellpadding="5" id="data table">
-                                <tr>
-                                    <td>drug_name</td>
-                                    <td>formula</td>
-                                    <td>price</td>
-                                    <td>company_name</td>
-                                    <td>manufacture_date</td>
-                                    <td>expiry_date</td>
-                                    <td>quantity</td>
-                                </tr>
-                                <tr>
-                                    <?php
-                                    while ($row = mysqli_fetch_assoc($result))
-                                    {
-                                    ?>
-                                        <td><?php echo $row['drug_name'];?></td>
-                                        <td><?php echo $row['formula'];?></td>
-                                        <td><?php echo $row['price'];?></td>
-                                        <td><?php echo $row['company_name'];?></td>
-                                        <td><?php echo $row['manufacture_date'];?></td>
-                                        <td><?php echo $row['expiry_date'];?></td>
-                                        <td><?php echo $row['quantity'];?></td>
-                                        <td><a href="delete.php?deleteid=<?php echo $row['drug_name']; ?>" class="btn btn-danger">Delete</a></td>
-                                    
-                                    </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tr>
-                            </table>
+                            <?php
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                ?>
+                                <div class="drug">
+                                <h3><?php echo $row['drug_name']; ?></h3>
+                                <p><strong>Formula:</strong> <?php echo $row['formula']; ?></p>
+                                <p><strong>Price:</strong> <?php echo $row['price']; ?></p>
+                                <p><strong>Company Name:</strong> <?php echo $row['company_name']; ?></p>
+                                <p><strong>Manufacture Date:</strong> <?php echo $row['manufacture_date']; ?></p>
+                                <p><strong>Expiry Date:</strong> <?php echo $row['expiry_date']; ?></p>
+                                <p><strong>Quantity:</strong> <?php echo $row['quantity']; ?></p>
+                                <img src="<?php echo $row['drug_image']; ?>" alt="<?php echo $row['drug_name']; ?>">
+                                </div>
+                                <?php
+                            }
+                            ?>
                         </div>
+                        <button class="btn btn-primary my-5"><a href="admin.php">Home</a></button>
                     </div>
                 </div>
             </div>

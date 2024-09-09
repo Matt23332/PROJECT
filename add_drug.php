@@ -3,7 +3,7 @@ require ("databaseHandler.php");
 
 class add_drug {
     public function insertDataIntoDatabase() {
-        $database = new databaseHandler("localhost","root","","test");
+        //$database = new databaseHandler("localhost","root","","test");
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $drug_name = $_POST["drug_name"];
             $formula = $_POST["formula"];
@@ -12,8 +12,21 @@ class add_drug {
             $manufacture_date = $_POST["manufacture_date"];
             $expiry_date = $_POST["expiry_date"];
             $quantity = $_POST["quantity"];
-        
+            
+            $uploadDirectory = "images/";
+            $targetFilePath = $uploadDirectory . basename($_FILES["drug_image"]["name"]);
 
+            if (move_uploaded_file($_FILES["drug_image"]["tmp_name"], $targetFilePath)) {
+                $conn = new mysqli("localhost","root","","test");
+                $insertQuery = "INSERT INTO drug(drug_name, formula, price, company_name, manufacture_date, expiry_date, quantity, drug_image) VALUES ('$drug_name', '$formula', $price, '$company_name', '$manufacture_date', '$expiry_date', $quantity, '$targetFilePath')";
+                if (mysqli_query($conn, $insertQuery)) {
+                    echo "Drug added successfully.";
+                }else {
+                    echo "Error: " . mysqli_error($conn);
+                }
+            } else {
+                echo "File upload failed.";
+            }
         $data = array(
             "drug_name" => $drug_name,
             "formula" => $formula,
@@ -24,7 +37,7 @@ class add_drug {
             "quantity" => $quantity
         );
 
-        $database->insertData("drug",$data);
+        //$database->insertData("drug",$data);
     }
     }
 }
@@ -45,16 +58,17 @@ $add_drug->insertDataIntoDatabase();
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!--navbar-->
+        <div class="navbar">
+            <ul>
+                <li><a href="admin.php">Home</a></li>
+            </ul>
+        </div>
         <!--wrapper-->
         <div class="wrapper">
             <section>
-                <center>
-                    <header>
-                        Drug form
-                    </header>
-                </center>
                 <!--drug form starts here-->
-                <form action="add_drug.php" class="header" method="POST">
+                <form action="add_drug.php" class="header" method="POST" enctype="multipart/form-data">
                     <div class="field input">
                         <label for="">Drug Name</label>
                         <input type="text" name="drug_name" placeholder="Enter the drug name">
@@ -83,6 +97,13 @@ $add_drug->insertDataIntoDatabase();
                         <label for="">Quantity</label>
                         <input type="number" name="quantity" min="1" placeholder="Enter the quantity">
                     </div>
+                    <div class="field input">
+                        <label for="">Drug Image</label>
+                        <input type="file" name="drug_image" accept=".jpeg, .jpg, .png" onchange="previewImage(this);">
+                    </div>
+                    <div class="field">
+                        <img id="image-preview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px;">
+                    </div>
                     <div class="field button">
                         <input type="submit" name="submit" value="ADD DRUG">
                     </div>
@@ -91,5 +112,23 @@ $add_drug->insertDataIntoDatabase();
             </section>
         </div>
         <!--wrapper-->
+            <script>
+                function previewImage(input) {
+                    var preview = document.getElementById('image-preview');
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+
+                        reader.onload = function(e) {
+                            preview.src = e.target.result;
+                            preview.style.display = 'block';
+                        };
+
+                        reader.readAsDataURL(input.files[0]);
+                    } else {
+                        preview.src = '#';
+                        preview.style.display = 'none';
+                    }
+                }
+        </script>
     </body>
 </html>
